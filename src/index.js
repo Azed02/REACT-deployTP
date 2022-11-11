@@ -1,17 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom/client';  // importer ReactDom afin d'afficher les resultats 
+import App from './App';    // importer la fonction  "App" du dossier "App.jsx" pour executer son contenu 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+
+const root = ReactDOM.createRoot(document.getElementById('root')); // precise l'emplacement d'affichage en creant un root 
+root.render(        // affichage dans le root crée 
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

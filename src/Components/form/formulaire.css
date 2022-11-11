@@ -1,0 +1,105 @@
+/*la premiere section vise de changer le style du body  : la couleur de l'arriere plan , la borderure , et les marges droite et gauche . */
+
+body{
+    background-color:rgb(206, 226, 234);
+    border: 2px;
+   
+    margin-left: 150px;
+    margin-right: 150px;
+}
+/* cette commande concerne tous les elements ecrits en h1 */
+h1{
+    text-align: center;     /*pour centrer le texte sur la page*/
+    font-style: bold  ;     /* les elements vont etre ecrits en gras*/
+    letter-spacing: 3px;     /* pour espacer les lettres des mots   */
+    text-shadow: 10px blueviolet;   /* affichage d'un ombre des ecritures en bleu-violets*/
+}
+
+/* tous les elements possedant les id cités ci-dessous auront une bordure dont les angles sont ovales et non pas pointus */ 
+#nom,#prenom , #age,#description,#formation,#techniques,#linguistiques,#adr,#mail{
+    border-radius: 20px;
+}
+
+/*  les proprietés du boutton sont adaptés pas l'usage de l'id affecté au bouton */
+#bttn{
+    width: 100px;     /* La largeur  du bouton */
+    height: 30px;     /* la longueur du bouton*/
+    border-radius: 50%;   /* les coins de la bordure du bouton*/
+    background-color:antiquewhite;   /*  pour modifier la couleur de l'arriere plan  du bouton */
+    
+
+}
+
+/* La declaration sous forme de .class est reservée aux classes */
+.infop{
+    border-bottom: 2px solid;  /* definit une bordure basse */
+    padding-left: 0px;      /* pour ne pas laisser de l'espace avant le texte */
+    margin-left: 340px;     /* definition d'une marge gauche */
+    margin-right:340px;       /* definition d'une marge droite */
+}
+
+#txt{
+    text-decoration: underline;  /* tous les labels ayant l'id "txt" seront soulignés */
+}
+
+#inpimage{
+    display : none ; /* pour masquer le  default-label */
+}
+.mep{
+    text-align: center;  /* pour centrer le texte sur la page */
+    border:3px solid;   /* definir une bordure */
+    border-radius: 20px;   /*ajuster les cotes de la bordure */
+    padding: 1px 1px 15px 1px;    /* pour definir un espace entre la bordure et le texte */
+    background:linear-gradient(to top , skyblue, grey);   /* pour definir la couleur que j'ai choisi  pour l'arriere plan */
+    box-shadow:  7px 7px 7px 7px rgba(10, 10, 10, 0.6);   /* pour afficher un ombre de tout le formulaire */
+   
+}
+.ip,.titlecom{
+    font-style: italic;  /* definir le police*/
+    font-size :15px;   /* definir la taille du police */
+    letter-spacing: 2px;  /* espacer  les lettres des mots */
+    text-decoration: underline ;   /* souligner le texte */
+    }      
+.dop,.FD,.comp{
+
+    border-bottom: 2px solid;    /* basse bordure du texte */
+    margin-left: 280px;          /* marge gauche*/
+    margin-right:280px;          /* marge droite */
+    font-style: italic;          /* definir le police */
+    font-size :15px  ;            /* la tailles du police */
+    letter-spacing: 2px;          /* espacer les lettres des mots */
+    text-decoration: underline ;    /* souligner  le texte*/
+    text-align: center;          /* deplacer le contenue au centre de la page */
+    
+}
+.titre{
+    
+    width: 100%;                /* la largeur  occupera toute la page */   
+    display: flex;             /* aligner deux sections */
+    justify-content: center;    /* centrer le contenu */
+    padding: 25px;              /* l'espace à laisser entre la bordure et le texte  */
+    border: 8px rgb(0, 0, 0);   /* definir une bordure */
+    border-radius: 20px;          /* modifier les cotes des bordures */
+    border-style:double;          /* pour avoir un style de bordure  double */
+    box-sizing: border-box;       /*  le texte s'applique tout au long  d la bordure */
+   
+    
+
+}
+#techniques,#linguistiques,#formation,#description,#nom,#prenom,#age,#adr,#mail,#ttre {
+    background-color: rgb(192, 217, 223);   /* definir la couleur  de l'arriere plan  des  inputs */
+}
+#ttre{
+    border-radius: 20px;    /* modifier les cotes de la  bordure du titre  */
+}
+.sct1{
+    
+    background-color:rgb(192, 217, 223);    /* definir la couleur  de l'arriere plan */
+}
+ ::placeholder{
+    float: left;  /* mettre le placeholder des inputs à gauche */
+    padding: 4px   ;
+}
+#formation{
+    margin-left: 15px;
+}

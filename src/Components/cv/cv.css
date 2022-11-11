@@ -1,0 +1,233 @@
+*{ /* Cela va etre executé sur tout le contenu */
+    --titleClrLight:rgb(0, 255, 221);
+    --titleClrDark:rgb(3, 71, 126);
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: rgb(235, 235, 235);    /* definition de la couleur de l'arriere plan */
+    height: 100vh;                             
+}
+.container{
+    position: absolute;                       
+    transform: translateX(-100px);
+    height: 100%;       /* pour remplire toute la page */
+    display: flex;       /* cela lui donne une flexibilité de changement de taille pour s'adapter */
+
+}
+a{
+    text-decoration: none;   /* pas de decoration des liens */
+    color: unset;          /* leur  vrai couleur ne va pas etre affichée */
+}
+header{
+    color: white;
+    background-color: rgb(7, 44, 62);
+    width: 30vw;                          /* la largeur de la partie  header*/
+    display: flex;
+    flex-direction: column;               /* la flexibilité offerte est verticale*/
+    align-items: center;                  /* les elements vont etre placés au centre */
+}
+main{
+    width: 65vw;
+    padding: 20px;                        /* la distance entre la bordure et le texte */
+    font-family: 'Abyssinica SIL', serif;    /*  definition du police */
+}
+.contact-container,.info-container,.education-container{
+    width: 90%;
+    border-bottom: 2px solid grey;         /* permettant la creation d'une barre  en dessous du texte*/
+    margin-bottom: 20px;                     /* la distance entre le texte et l'extrimité  inferieure de la page */
+}
+.info-container{
+    position: relative;                       /* sa position n'est pas absolue , elle peut changer */
+    display: grid;                            /* pour centrer l'image du Cv et l'age sur le header */
+    place-items: center;                      /* center les elemnts  du header */
+    height: 300px;
+}
+.info-container img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;                   /* nous permet de modifer les cotes de la bordure  ce qui m'a été utile pour rogner l'image en cercle */
+    border: 4px double white;
+    position: absolute;                    /* la postion de l'image  n'est pas relative */
+    top: 45px;                      /* deplacer l'image en haut */
+}
+.info-container span{
+    position: absolute;
+    letter-spacing: 2px;            /* la distance entre les lettres des mots */
+}
+.info-container .name{
+    font-weight: bold;            /* mettre le style d'ecriure en gras */
+    bottom: 50px;                  /* deplacer le mot en dessous de l'image */
+    font-family: 'Abyssinica SIL', serif;
+}
+.info-container .date{
+    bottom: 30px;
+    font-size: 14px;           /* la taille du police */
+}
+.container-title{
+    text-transform: uppercase;       /* transforme le text saisi en minuscule */
+    color: var(--titleClrLight);      /* var()   variable fait reference aux couleurs cités au debut du programme */
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 22px;
+}
+.contact-container{
+    width: 90%;
+    padding: 10px 0;
+    border-bottom: 2px solid grey;
+}
+.contact-container .contact-wrapper{
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;          /*offre de l'espace verticalement  entre  les lignes */
+}
+.contact-container .contact-wrapper a i {
+    color: var(--titleClrLight);
+    margin-right: 15px;                 /* la marge droite */
+    font-size: 18px;
+    width: 20px;
+}
+.contact-container .contact-wrapper a span{
+    font-family: 'Abyssinica SIL', serif;
+}
+.languages-container {
+    width: 90%;
+    border-bottom: 2px solid grey;
+}
+.languages-container .languages-wrapper{
+    margin: 10px 0 20px 0;
+    display: grid;
+    gap:20px;                  /* offre de l'espace verticalement et horizontalement */
+    font-size: 18px;
+    text-transform: uppercase;    /* le texte est transformé en majuscule */
+    letter-spacing: 2px;
+}
+
+.section-title{
+    color: var(--titleClrDark);
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 24px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+.profile-section .profile-infos{
+    margin: 10px 0 20px 0;
+}
+.education-section .education-infos{
+    display: flex;
+}
+.education-section .section-title{
+    margin-bottom: 20px;
+}
+.education-section .education-infos{
+    margin: 10px 0;
+}
+.profile-section .profile-infos::first-letter{
+    margin-left:40px;
+}
+.education-section .education-infos .delay{
+    color: var(--titleClrDark);
+    font-size: 28px;
+    letter-spacing: 2px;
+    padding:10px 20px;
+    border-left: 2px solid var(--titleClrDark);  /* bordure gauche et bordure droite sous forme de lignes verticale*/
+    border-right: 2px solid var(--titleClrDark);
+    margin-right: 20px;
+}
+.education-section .education-infos .details{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.skills-section .section-title{
+    margin-bottom: 20px;
+}
+.skills-section .skills-wrapper{
+    border-left: 4px solid var(--titleClrDark);
+    padding: 10px;
+}
+.skills-section .skills-wrapper .skill{
+    margin: 30px 0;
+    display: flex;
+}
+
+.skills-section .skills-wrapper .skill::before{ /* assure une animation où la valeur initiale est vide */ 
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--titleClrDark);
+    transform: translate(-20px,3px);      /* pour pouvoir mettre les points sur la ligne verticale mise on devait  les translater    en utilisant translate */            
+}
+.skills-section .skill .skill-name{
+    width: 10vw;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+.skills-section .skill .skill-bar{
+    border: 2px solid rgb(103, 103, 103);
+    width: 60vw;
+    border-radius: 10px;
+    height: 20px;
+}
+.skills-section .skill .skill-bar::before{
+    content:'';
+    position: absolute;
+    background-color: var(--titleClrDark);
+    filter:brightness(150%);
+    width: 0;
+    height: 20px;
+    border-radius: 8px;
+}
+.skills-section .skill .bar1::before{
+    animation: skillLevel1 2s linear forwards;    /* l animation se fait en avant dans 2 sc avant qu'elle se stabilise est d'une maniere lineaire */
+}
+.skills-section .skill .bar2::before{
+    animation: skillLevel2 2s linear forwards;
+}
+.skills-section .skill .bar3::before{
+    animation: skillLevel3 2s linear forwards;
+}
+@keyframes skillLevel1{  /* les animations sont faite de 0 dans la largeur jusqu'à la valeur voulu */
+    from{width: 0;}
+    to{ width:  45vw;}
+}
+@keyframes skillLevel2{
+    from{width: 0;}
+    to{ width:  40vw;}
+}
+@keyframes skillLevel3{
+    from{width: 0;}
+    to{ width:  35vw;}
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color:rgb(197, 197, 197);
+    width: 100vw;
+    color: var(--titleClrDark);
+    display: flex;
+    justify-content: space-between;     /* pour laisser de l'espace entre les items */
+    padding: 25px;
+    box-sizing: border-box;             /* le contenu ne va pas depasser la taille de la bordure*/
+}
+
+footer .edited{
+    letter-spacing: 1px;    /* l'espace entre les lettres d'un mot*/
+    font-size: 18px;
+}
+footer {
+    letter-spacing: 1px;
+}
+footer .edited span{
+    text-transform: uppercase;
+    font-size: 16px;
+}
