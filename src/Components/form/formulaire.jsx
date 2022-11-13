@@ -2,6 +2,7 @@
 import "./formulaire.css" // on importe le dossier contenant le CSS 
 import { vnom,vprenom,vage,vdesc,vadr,vmail } from "../../checkers"; // on importe le differents fonctions permettant de verifier les conditions imposées 
 export default function FormInput({setIsReady,setCurrentUser}){
+    
     //DECLARATION DES VARIABLES
     let prenom, nom,age, emaila, adresse,numerotel, dop, image, form1, form2,form3,date1, date2 , date3, langue, tech1,tech2, tech3;
 // La fonction qui suit s'assure des conditions precisées par l'utilisateur sur les champs du formulaire  et permet l'affichage du cv dans le cas où tout est respecté

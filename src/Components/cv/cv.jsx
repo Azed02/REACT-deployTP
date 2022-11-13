@@ -8,8 +8,8 @@ const Cv = ({currentUser}) => {
         <header>  {/* Notre  page du Cv  sera divisée en 3 parties : le "header", le "main " et le "footer" */ }
             <div className ="info-container">
                 <img src={URL.createObjectURL(currentUser.image)} alt="image personnel" /> {/* la source sera celle  saisi en formulaire */ }
-                <span className ="name">{currentUser.nom}</span>  {/* les inputs seront remplies par les valeurs saisies au clavier */}
-                <span className ="date">{currentUser.age} </span>
+                <span className ="name">{currentUser.nom} {currentUser.prenom}</span>  {/* les inputs seront remplies par les valeurs saisies au clavier */}
+                <span className ="date">{currentUser.age} ANS </span>
             </div>
             {/* il y aura  des div et span definis pour  pouvoir categoriser les informations entrées*/}
            
@@ -18,7 +18,7 @@ const Cv = ({currentUser}) => {
                 <div className ="contact-wrapper">
                     <a>
                         <i className ="fa-solid fa-location-dot"></i>
-                        <span>{currentUser.adr}</span>   {/*actualisation de la valeur de l'adresse */}
+                        <span>{currentUser.adresse}</span>   {/*actualisation de la valeur de l'adresse */}
                     </a>
                    
                     <a href="mailto:zaidiasmae2002@gmail.com">
