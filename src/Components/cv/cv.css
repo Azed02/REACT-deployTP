@@ -84,13 +84,13 @@ main{
     flex-direction: column;
     justify-content: space-evenly;          /*offre de l'espace verticalement  entre  les lignes */
 }
-.contact-container .contact-wrapper a i {
+.contact-container .contact-wrapper div i {
     color: var(--titleClrLight);
     margin-right: 15px;                 /* la marge droite */
     font-size: 18px;
     width: 20px;
 }
-.contact-container .contact-wrapper a span{
+.contact-container .contact-wrapper div span{
     font-family: 'Abyssinica SIL', serif;
 }
 .languages-container {
