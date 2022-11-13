@@ -7,17 +7,15 @@ export default function FormInput({setIsReady,setCurrentUser}){
     let prenom, nom,age, emaila, adresse,numerotel, dop, image, form1, form2,form3,date1, date2 , date3, langue, tech1,tech2, tech3;
 // La fonction qui suit s'assure des conditions precisées par l'utilisateur sur les champs du formulaire  et permet l'affichage du cv dans le cas où tout est respecté
     const submitHandler = (e) => {
-        e.preventDefault() //"preventDefault" etait necessaire pour empecher l'actualisation de la page  apres avoir soumis le formulaire 
+        e.preventDefault() //"preventDefault" etait necessaire pour empecher l'actualisation de la page  apres avoir soumis le formulaire
         if(vnom(nom)&& vprenom(prenom) && vage(age)  && vdesc(dop)&& vadr(adresse)&&vmail(emaila) ){ //dans le cas où  tout est respecté
            setCurrentUser({prenom,nom,age,emaila,adresse,numerotel,dop,image,form1,date1,form2,date2,form3,date3,langue,tech1,tech2,tech3}) // Les nouveux valeurs saisies seront enregistés
-           console.log("test")
             setIsReady(true)  // Le Cv sera prêt à afficher 
         } else {  // cette pertie permet l'affichage des alertes en cas de braver les conditions des inputs 
             if(!vprenom(prenom)) alert("veuillez saisir la 1ère lettre en majuscule ");
             if(!vnom(nom)) alert("veuillez saisir le nom en MAJ ");
             if(!vage(age)) alert("veuillez saisir un age > 18");
             if(!vmail(emaila)) alert("veuillez saisir  un email convenable");
-           
             if(!vadr(adresse)) alert("veuillez saisir une adresse adequate ");
         }
        
