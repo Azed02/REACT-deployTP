@@ -16,16 +16,16 @@ const Cv = ({currentUser}) => {
             <div className ="contact-container">
                 <span className ="container-title">Contact info</span> {/* Ce span est defini pour inserer les informations du contact */}
                 <div className ="contact-wrapper">
-                    <a>
+                    <a href=''>
                         <i className ="fa-solid fa-location-dot"></i>
                         <span>{currentUser.adresse}</span>   {/*actualisation de la valeur de l'adresse */}
                     </a>
                    
-                    <a href="mailto:zaidiasmae2002@gmail.com">
+                    <a href="">
                         <i className ="fa-solid fa-envelope"></i>
                         <span>{ currentUser.emaila}</span>  {/*actualisation de la valeur de l'email' */}
                     </a>
-                    <a href="tel:+212648589246">
+                    <a href="">
                         <i className="fa-solid fa-phone"></i>
                         <span>{currentUser.numerotel}</span>  {/*actualisation de la valeur du numero de tel */}
                     </a>
