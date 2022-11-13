@@ -102,4 +102,4 @@ const Cv = ({currentUser}) => {
     
 
  
-export default Cv;   {/* export la fonction pour pouvoir l'importer dans app.jsx*/}
+export default Cv;   // export la fonction pour pouvoir l'importer dans app.jsx
