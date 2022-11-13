@@ -7,7 +7,7 @@ const Cv = ({currentUser}) => {
     <div className ="container">
         <header>  {/* Notre  page du Cv  sera divisée en 3 parties : le "header", le "main " et le "footer" */ }
             <div className ="info-container">
-                <img src={URL.createObjectURL(currentUser.image)} alt="image personnel" /> {/* la source sera celle  saisi en formulaire */ }
+                <img src={URL.createObjectURL(currentUser.image)} alt="personnel" /> {/* la source sera celle  saisi en formulaire */ }
                 <span className ="name">{currentUser.nom} {currentUser.prenom}</span>  {/* les inputs seront remplies par les valeurs saisies au clavier */}
                 <span className ="date">{currentUser.age} ANS </span>
             </div>
